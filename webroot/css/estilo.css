@@ -1,0 +1,30 @@
+h1{
+    background-color: brown;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+footer{
+    background-color: brown;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+footer img{
+    float: right;
+    padding-right: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    border-style: solid;
+    padding: 10px;
+}
