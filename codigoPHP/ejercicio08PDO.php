@@ -28,13 +28,15 @@ Ultima edición: 11/11/2021-->
                 $archivoXML->formatOutput=true;
                 
                 
-                $nodo=$archivoXML->createElement('Departamentos');
-                $root=$archivoXML->appendChild($nodo);
+                $departamentos=$archivoXML->createElement('Departamentos');
+                $root=$archivoXML->appendChild($departamentos);
                 
                 $oDepartamento=$oResultado->fetchObject();
                 while($oDepartamento){
-                    $nodo=$archivoXML->createElement('Departamento');
-                    $root=$archivoXML->appendChild($nodo);
+                    $departamento=$archivoXML->createElement('Departamento');
+                    $root=$archivoXML->appendChild($departamento);
+                    
+                    
                     
                     $oDepartamento=$consulta->fetchObject();
                 }

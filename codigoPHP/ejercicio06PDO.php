@@ -6,9 +6,27 @@ Ultima edición: 10/11/2021-->
     <head>
         <meta charset="UTF-8">
         <title>Ejercicio 06 PDO</title>
+        <style>
+            a{
+                text-decoration: none;
+                color: grey;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <?php
+            /*
+             * @author: David del Prado Losada
+             * @version: v1.Realizacion del ejercicio
+             * Created on: 10/11/2021
+             * Ejercicio 6.Pagina web que cargue registros en la tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada
+             */
+        
+            echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 6</h1>';
+            
             //Incluir el archivo de conexión con la base de datos
             require_once "../config/confDBPDO.php";
             

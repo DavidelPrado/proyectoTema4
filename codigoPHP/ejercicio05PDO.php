@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<!--David del Prado Losada
-Creación: 10/11/2021
-Ultima edición: 10/11/2021-->
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Ejercicio 05 PDO</title>
+        <style>
+            a{
+                text-decoration: none;
+                color: grey;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <?php
+            /*
+             * @author: David del Prado Losada
+             * @version: v1.Realizacion del ejercicio
+             * Created on: 10/11/2021
+             * Ejercicio 5.Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno
+             */
+        
+            echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 5</h1>';
+            
+            //Incluir la libreria de validación de formularios
             require_once "../config/confDBPDO.php";
 
             try{

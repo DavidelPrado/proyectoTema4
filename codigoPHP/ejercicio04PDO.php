@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!--David del Prado Losada
-Creación: 10/11/2021
-Ultima edición: 10/11/2021-->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -31,10 +28,26 @@ Ultima edición: 10/11/2021-->
             p{
                 color: red;
             }
+            a{
+                text-decoration: none;
+                color: grey;
+            }
+            h1{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <?php
+            /*
+             * @author: David del Prado Losada
+             * @version: v1.Realizacion del ejercicio
+             * Created on: 10/11/2021
+             * Ejercicio 4.Formulario de búsqueda de departamentos por descripción(por una parte del campo DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
+             */
+        
+            echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 4</h1>';
+            
             //Incluir la libreria de validación de formularios
             include '../core/210322ValidacionFormularios.php';
             
