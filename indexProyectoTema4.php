@@ -68,15 +68,15 @@
                 <td>Ejercicio 07-Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el directorio .../tmp/ del servidor.</td>
                 <td><a href="codigoPHP/ejercicio07PDOXML.php">Ejecutar</a></td>
                 <td><a href="mostrarcodigo/muestraEjercicio07PDOXML.php">Mostrar</a></td>
-                <td><a>Ejecutar</a></td>
-                <td><a>Mostrar</a></td>
+                <td><a href="codigoPHP/ejercicio07PDOJSON.php">Ejecutar</a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio07PDOJSON.php">Mostrar</a></td>
             </tr>
             <tr>
                 <td>Ejercicio 08-Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se encuentra en el directorio .../tmp/ del servidor.</td>
                 <td><a href="codigoPHP/ejercicio08PDOXML.php">Ejecutar</a></td>
                 <td><a href="mostrarcodigo/muestraEjercicio08PDOXML.php">Mostrar</a></td>
-                <td><a>Ejecutar</a></td>
-                <td><a>Mostrar</a></td>
+                <td><a href="codigoPHP/ejercicio08PDOJSON.php">Ejecutar</a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio08PDOJSON.php">Mostrar</a></td>
             </tr>
         </table>
         

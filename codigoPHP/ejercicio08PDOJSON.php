@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio 08 PDO XML</title>
+        <title>Ejercicio 08 PDO JSON</title>
         <style>
             a{
                 text-decoration: none;
@@ -39,38 +39,25 @@
                 $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                 $oResultado->execute();
                 
-                //Formateo de la salida
-                $archivoXML=new DOMDocument();
-                $archivoXML->formatOutput=true;
+                $aDepartamentos=[];
                 
-                //Creacion de la raiz
-                $departamentos=$archivoXML->createElement('Departamentos');
-                $root=$archivoXML->appendChild($departamentos);
-                
-                $oDepartamento=$oResultado->fetchObject();
-                while($oDepartamento){
-                    //Elemento departamento
-                    $departamento=$archivoXML->createElement('Departamento');
-                    $departamentos->appendChild($departamento);
+                $departamento=$oResultado->fetchObject();
+                while($departamento){
+                    $aDepartamento=[
+                        "CodDepartamento"=>$departamento->CodDepartamento,
+                        "DescDepartamento"=>$departamento->DescDepartamento,
+                        "FechaBaja"=>$departamento->FechaBaja,
+                        "VolumenNegocio"=>$departamento->VolumenNegocio,
+                    ];
                     
-                    //Datos de cada departamento
-                    $datosDepartamento=$archivoXML->createElement('CodDepartamento', $oDepartamento->CodDepartamento);
-                    $departamento->appendChild($datosDepartamento);
-                    
-                    $datosDepartamento=$archivoXML->createElement('DescDepartamento', $oDepartamento->DescDepartamento);
-                    $departamento->appendChild($datosDepartamento);
-                    
-                    $datosDepartamento=$archivoXML->createElement('FechaBaja', $oDepartamento->FechaBaja);
-                    $departamento->appendChild($datosDepartamento);
-                    
-                    $datosDepartamento=$archivoXML->createElement('VolumenNegocio', $oDepartamento->VolumenNegocio);
-                    $departamento->appendChild($datosDepartamento);
-                    
-                    $oDepartamento=$oResultado->fetchObject();
+                    array_push($aDepartamentos, $aDepartamento);
+                    $departamento=$oResultado->fetchObject();
                 }
                 
-                //Guardado del archivo
-                $archivoXML->save("../tmp/departamento.xml");
+                
+                $archivoJSON=json_encode($aDepartamentos, JSON_PRETTY_PRINT);
+                
+                file_put_contents("../tmp/departamento.json", $archivoJSON);
                 
                 echo 'Archivo creado';
                 
