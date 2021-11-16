@@ -39,10 +39,10 @@
                 $consulta="INSERT INTO Departamento VALUES (:CodDepartamento, :DescDepartamento, :FechaBaja, :VolumenNegocio);";
                 $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                 
-                //Obtener contenido del archivo departamento.json
+                //Transforma el fichero a una cadena
                 $archivoJSON=file_get_contents("../tmp/departamento.json");
                 
-                //Transforma el archivo a un formato que php pueda utilizar
+                //Transforma una cadena JSON a un formato que php pueda utilizar
                 $aDepartamentos=json_decode($archivoJSON);
                 
                 //Datos de cada departamento

@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<!--David del Prado Losada
-Creación: 04/11/2021
-Ultima edición: 05/11/2021-->
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Ejercicio 01 MySQLi</title>
+        <style>
+            a{
+                text-decoration: none;
+                color: grey;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <?php
+            /*
+             * @author: David del Prado Losada
+             * @version: v1.Realizacion del ejercicio
+             * Created on: 04/1/2021
+             * Ejercicio 1.Conexión a la base de datos con la cuenta usuario y tratamiento de errores.
+             */
+        
+            echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 1</h1>';
+            
             //Incluir el archivo de conexión con la base de datos
             include "../config/confDBMySQL.php";
         

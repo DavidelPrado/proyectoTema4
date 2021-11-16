@@ -3,14 +3,7 @@ h1{
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
-    color: white;
-}
-
-footer{
-    background-color: brown;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    margin-top: 0px;
     color: white;
 }
 
@@ -23,10 +16,21 @@ footer{
     border-style: solid;
     padding: 10px;
 }
+
+footer{
+    background-color: brown;
+    position: absolute;
+    text-align: center;
+    width: 98%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    color: white;
+    bottom: 10px;
+}
 footer table{
     margin: auto;
 }
-
 table img{
     border-radius: 5px;
 }

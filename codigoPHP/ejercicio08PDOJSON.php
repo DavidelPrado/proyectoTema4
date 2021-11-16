@@ -62,7 +62,7 @@
                 //Transforma el array a json
                 $archivoJSON=json_encode($aDepartamentos, JSON_PRETTY_PRINT);
                 
-                //Guarda el contenido en el archivo departamentos.json
+                //Escribe los datos en el archivo departamentos.json
                 file_put_contents("../tmp/departamento.json", $archivoJSON);
                 
                 echo 'Archivo creado';
