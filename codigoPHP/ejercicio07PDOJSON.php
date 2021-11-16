@@ -19,7 +19,7 @@
              * @author: David del Prado Losada
              * @version: v1.Realizacion del ejercicio
              * Created on: 16/11/2021
-             * Ejercicio 8.Ejercicio 7.Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el directorio .../tmp/ del servidor.
+             * Ejercicio 7.Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el directorio .../tmp/ del servidor.
              */
         
             echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 7</h1>';
@@ -37,16 +37,20 @@
                 $consulta="INSERT INTO Departamento VALUES (:CodDepartamento, :DescDepartamento, :FechaBaja, :VolumenNegocio);";
                 $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                 
+                //Obtener contenido del archivo departamento.json
                 $archivoJSON=file_get_contents("../tmp/departamento.json");
                 
+                //Transforma el archivo a un formato que php pueda utilizar
                 $aDepartamentos=json_decode($archivoJSON);
                 
+                //Datos de cada departamento
                 foreach($aDepartamentos as $departamento){
                     $oResultado->bindParam(':CodDepartamento', $departamento->CodDepartamento);
                     $oResultado->bindParam(':DescDepartamento', $departamento->DescDepartamento);
                     $oResultado->bindParam(':FechaBaja', $departamento->FechaBaja);
                     $oResultado->bindParam(':VolumenNegocio', $departamento->VolumenNegocio);
                     
+                    //Ejecutar el query
                     $oResultado->execute();
                 }
                 

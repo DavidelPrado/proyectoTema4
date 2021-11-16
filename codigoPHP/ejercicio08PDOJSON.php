@@ -39,10 +39,12 @@
                 $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                 $oResultado->execute();
                 
+                //Inicializar array para guardar departamentos
                 $aDepartamentos=[];
                 
                 $departamento=$oResultado->fetchObject();
                 while($departamento){
+                    //Datos de cada departamento
                     $aDepartamento=[
                         "CodDepartamento"=>$departamento->CodDepartamento,
                         "DescDepartamento"=>$departamento->DescDepartamento,
@@ -50,13 +52,15 @@
                         "VolumenNegocio"=>$departamento->VolumenNegocio,
                     ];
                     
+                    //Guarda los departamentos en un array
                     array_push($aDepartamentos, $aDepartamento);
                     $departamento=$oResultado->fetchObject();
                 }
                 
-                
+                //Transforma el array a json
                 $archivoJSON=json_encode($aDepartamentos, JSON_PRETTY_PRINT);
                 
+                //Guarda el contenido en el archivo departamentos.json
                 file_put_contents("../tmp/departamento.json", $archivoJSON);
                 
                 echo 'Archivo creado';

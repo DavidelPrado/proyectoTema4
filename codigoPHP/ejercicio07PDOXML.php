@@ -60,7 +60,6 @@ Ultima edición: 15/11/2021-->
                     $fechaBaja=$datoDepartamento->getElementsByTagName('FechaBaja')->item(0)->nodeValue==''?null:$FechaBaja;
                     $volumenNegocio=$datoDepartamento->getElementsByTagName('VolumenNegocio')->item(0)->nodeValue;
                     
-                    //Seleccionar parametros
                     $oResultado->bindParam(':CodDepartamento', $codDepartamento);
                     $oResultado->bindParam(':DescDepartamento', $descDepartamento);
                     $oResultado->bindParam(':FechaBaja', $fechaBaja);
