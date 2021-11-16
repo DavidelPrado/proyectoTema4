@@ -14,17 +14,19 @@ footer{
     color: white;
 }
 
-footer img{
-    float: right;
-    padding-right: 20px;
-}
-
-table{
+.main{
     border-collapse: collapse;
     width: 100%;
 }
 
-td, th{
+.main td, .main th{
     border-style: solid;
     padding: 10px;
+}
+footer table{
+    margin: auto;
+}
+
+table img{
+    border-radius: 5px;
 }

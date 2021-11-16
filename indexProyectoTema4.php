@@ -10,7 +10,7 @@
     <body>
         <h1>EJERCICIOS TEMA 4</h1>
         
-        <table>
+        <table class="main">
             <tr>
                 <th>Enunciado</th>
                 <th colspan="2">PDO</th>
@@ -81,8 +81,12 @@
         </table>
         
         <footer>
-            <p>David del Prado Losada - 03/11/2021 - DAW2</p>
-            <a href="https://github.com/DavidelPrado" target="_blank"><img src="../img/git.png" width="50px" height="50px"></img></a>
+            <table>
+                <tr>
+                    <td><p>David del Prado Losada - 03/11/2021 - DAW2</p></td>
+                    <td><a href="https://github.com/DavidelPrado" target="_blank"><img src="../img/git.png" width="50px" height="50px"></img></a></td>
+                </tr>
+            </table>
         </footer>
     </body>
 </html>
