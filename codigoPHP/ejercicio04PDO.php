@@ -35,6 +35,9 @@
             h1{
                 text-align: center;
             }
+            tr, td, th{
+                border: 1px solid black;
+            }
         </style>
     </head>
     <body>
@@ -105,7 +108,7 @@
                     $DAW2105DBDepartamentos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
                     //Query de seleccion que comprueba que CodDep no esta repetido
-                    $consulta="SELECT * FROM Departamento WHERE DescDepartamento like'%{$_REQUEST['descripcion']}%';";
+                    $consulta="SELECT * FROM Departamento WHERE DescDepartamento LIKE'%{$_REQUEST['descripcion']}%';";
                     $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                     $oResultado->execute();
                         

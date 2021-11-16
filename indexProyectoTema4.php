@@ -60,16 +60,21 @@
                 <td><a>Mostrar</a></td>
             </tr>
             <tr>
+                <th></th>
+                <th colspan="2">XML</th>
+                <th colspan="2">JSON</th>
+            </tr>
+            <tr>
                 <td>Ejercicio 07-Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el directorio .../tmp/ del servidor.</td>
-                <td><a href="codigoPHP/ejercicio07PDO.php">Ejecutar</a></td>
-                <td><a href="mostrarcodigo/muestraEjercicio07PDO.php">Mostrar</a></td>
+                <td><a href="codigoPHP/ejercicio07PDOXML.php">Ejecutar</a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio07PDOXML.php">Mostrar</a></td>
                 <td><a>Ejecutar</a></td>
                 <td><a>Mostrar</a></td>
             </tr>
             <tr>
                 <td>Ejercicio 08-Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se encuentra en el directorio .../tmp/ del servidor.</td>
-                <td><a href="codigoPHP/ejercicio08PDO.php">Ejecutar</a></td>
-                <td><a href="mostrarcodigo/muestraEjercicio08PDO.php">Mostrar</a></td>
+                <td><a href="codigoPHP/ejercicio08PDOXML.php">Ejecutar</a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio08PDOXML.php">Mostrar</a></td>
                 <td><a>Ejecutar</a></td>
                 <td><a>Mostrar</a></td>
             </tr>

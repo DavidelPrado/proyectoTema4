@@ -35,6 +35,9 @@
             h1{
                 text-align: center;
             }
+            tr, td, th{
+                border: 1px solid black;
+            }
         </style>
     </head>
     <body>

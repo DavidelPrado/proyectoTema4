@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Ejercicio 02 PDO</title>
         <style>
-            tr, th, td{
+            tr, td, th{
                 border: 1px solid black;
             }
             a{
@@ -63,7 +63,8 @@
                 echo '</table>';
                 
                 //Devolver numero de registros
-                
+                echo '<p>Numero de registros: '.$oResultado->rowCount().'</p>';
+
                 /*
                 $oResultado->execute();
                 //Mostrar el resultado de la consulta utilizando fetch
