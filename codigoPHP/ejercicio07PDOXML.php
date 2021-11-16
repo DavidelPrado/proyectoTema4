@@ -22,7 +22,9 @@ Ultima edición: 15/11/2021-->
              * @author: David del Prado Losada
              * @version: v1.Realizacion del ejercicio
              * Created on: 11/11/2021
-             * Ejercicio 7.Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el directorio .../tmp/ del servidor.
+             * Ejercicio 7.Página web que toma datos (código y descripción) de un fichero xml y los 
+             * añade a la tabla Departamento de nuestra base de datos. (IMPORTAR). El fichero importado 
+             * se encuentra en el directorio .../tmp/ del servidor.
              */
         
             echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 7</h1>';

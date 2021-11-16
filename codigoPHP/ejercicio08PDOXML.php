@@ -19,7 +19,9 @@
              * @author: David del Prado Losada
              * @version: v1.Realizacion del ejercicio
              * Created on: 11/11/2021
-             * Ejercicio 8.Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se encuentra en el directorio .../tmp/ del servidor.
+             * Ejercicio 8.Página web que toma datos (código y descripción) de la tabla Departamento 
+             * y guarda en un fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero 
+             * exportado se encuentra en el directorio .../tmp/ del servidor.
              */
         
             echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 8</h1>';
