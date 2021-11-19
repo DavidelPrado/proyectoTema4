@@ -10,6 +10,8 @@
     <body>
         <h1>EJERCICIOS TEMA 4</h1>
         
+        <a href="mostrarcodigo/muestraConfiguracion.php"><h3>Configuración de la base de datos</h3></a>
+        
         <table class="main">
             <tr>
                 <th>Enunciado</th>
@@ -78,12 +80,16 @@
                 <td><a href="codigoPHP/ejercicio08PDOJSON.php">Ejecutar</a></td>
                 <td><a href="mostrarcodigo/muestraEjercicio08PDOJSON.php">Mostrar</a></td>
             </tr>
+            <tr>
+                <td>Ejercicio 09-Aplicación resumen MtoDeDepartamentosTema4.</td>
+                <td style="text-align: center;" colspan="4"><a href="../205DWESMtoDepartamentosTema4/codigoPHP/MtoDepartamentos.php">Ejecutar</a></td>
+            </tr>
         </table>
         
         <footer>
             <table>
                 <tr>
-                    <td><p>David del Prado Losada - 03/11/2021 - DAW2</p></td>
+                    <td><p>David del Prado Losada - DAW2</p></td>
                     <td><a href="https://github.com/DavidelPrado" target="_blank"><img src="../img/git.png" width="50px" height="50px"></img></a></td>
                 </tr>
             </table>

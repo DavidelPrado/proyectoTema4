@@ -107,12 +107,12 @@
                     //Configurar las excepciones
                     $DAW2105DBDepartamentos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    //Query de seleccion que comprueba que CodDep no esta repetido
-                    $consulta="SELECT * FROM Departamento WHERE DescDepartamento LIKE'%{$_REQUEST['descripcion']}%';";
+                    //Query de seleccion
+                    $consulta="SELECT * FROM Departamento WHERE DescDepartamento LIKE'%{$aCorrecto['descripcion']}%';";
                     $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                     $oResultado->execute();
                         
-                    //Compruebar que el resultado de la consulta es mayor que 0, si es mayor que 0 el codigo de departamento ya existe
+                    //Comprueba que el resultado de la consulta es mayor que 0, si es mayor que 0 el codigo de departamento ya existe
                     if($oResultado->rowCount()>0){
                         $oDepartamento=$oResultado->fetchObject();
                         

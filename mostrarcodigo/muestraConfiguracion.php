@@ -6,7 +6,11 @@
     </head>
     <body>
         <?php
-            highlight_file("../");
+            echo "<h1>Configuración en PDO:</h1>";
+            highlight_file("../config/confDBPDO.php");
+            
+            echo "<h1>Configuración en MySQL:</h1>";
+            highlight_file("../config/confDBMySQL.php");
         ?>
     </body>
 </html>

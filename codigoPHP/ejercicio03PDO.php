@@ -161,14 +161,16 @@
 
                     //Mostrar el resultado de la consulta utilizando fetchObject 
                     $oDepartamento=$oResultado2->fetchObject();
-
-                    echo '<table>';
-                    echo '<tr>';
-                    echo '<th>CodDepartamento</th>';
-                    echo '<th>DescDepartamento</th>';
-                    echo '<th>FechaBaja</th>';
-                    echo '<th>VolumenNegocio</th>';
-                    echo '</tr>';
+                    
+                    ?>
+                    <table>
+                        <tr>
+                            <th>CodDepartamento</th>
+                            <th>DescDepartamento</th>
+                            <th>FechaBaja</th>
+                            <th>VolumenNegocio</th>
+                        </tr>
+                    <?php
                     while($oDepartamento){
                         echo '<tr>';
                         foreach ($oDepartamento as $valor) {
@@ -177,7 +179,9 @@
                         echo '</tr>';
                         $oDepartamento=$oResultado2->fetchObject();
                     }
-                    echo '</table>';
+                    ?>
+                    </table>
+                    <?php
 
                 }catch(PDOException $excepcion){
                     $errorExcepcion=$excepcion->getCode();
