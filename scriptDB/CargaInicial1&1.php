@@ -8,7 +8,7 @@
         $DAW2105DBDepartamentos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         $sql=<<<PDO
-            insert into Departamento (CodDepartamento, DescDepartamento, FechaBaja, VolumenNegocio) VALUES 
+            INSERT INTO Departamento (CodDepartamento, DescDepartamento, FechaBaja, VolumenNegocio) VALUES 
             ('INF', 'Departamento de informatica', null, 1000.0),
             ('CIE', 'Departamento de ciencia', null, 2000.0),
             ('HIS', 'Departamento de historia', null, 1000.0);

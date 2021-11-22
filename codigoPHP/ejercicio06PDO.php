@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!--David del Prado Losada
-Creación: 10/11/2021
-Ultima edición: 10/11/2021-->
 <html>
     <head>
         <meta charset="UTF-8">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--David del Prado Losada
 Creación: 04/11/2021
@@ -29,4 +30,3 @@ Ultima edición: 05/11/2021-->
         ?>
     </body>
 </html>
-

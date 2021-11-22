@@ -1,12 +1,4 @@
-h1{
-    background-color: brown;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    color: white;
-}
-
-footer{
+h1, footer{
     background-color: brown;
     text-align: center;
     padding-bottom: 10px;
@@ -24,7 +16,11 @@ table{
     width: 100%;
 }
 
-td, th{
+td{
     border-style: solid;
     padding: 10px;
+}
+
+footer td{
+    border-style: none;
 }
