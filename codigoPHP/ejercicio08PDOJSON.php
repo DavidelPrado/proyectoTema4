@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<!--David del Prado Losada
-Creación: 11/11/2021
-Ultima edición: 11/11/2021-->
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio 08 PDO</title>
+        <title>Ejercicio 08 PDO JSON</title>
+        <style>
+            a{
+                text-decoration: none;
+                color: grey;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <?php
+            /*
+             * @author: David del Prado Losada
+             * @version: v1.Realizacion del ejercicio
+             * Created on: 16/11/2021
+             * Ejercicio 8.Página web que toma datos (código y descripción) de la tabla Departamento 
+             * y guarda en un fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero 
+             * exportado se encuentra en el directorio ../tmp/ del servidor.
+             */
+        
+            echo '<h1><a href=".."><=</a>   PROYECTO TEMA 4 - EJERCICIO 8</h1>';
+            
             //Incluir el archivo de conexión con la base de datos
             require_once "../config/confDBPDO.php";
         
@@ -20,28 +37,35 @@ Ultima edición: 11/11/2021-->
                 
                 
                 //Query de seleccion del contenido de la tabla Departamento
-                $consulta="SELECT CodDepartamento, DescDepartamento FROM Departamento";
+                $consulta="SELECT * FROM Departamento";
                 $oResultado=$DAW2105DBDepartamentos->prepare($consulta);
                 $oResultado->execute();
                 
-                $archivoXML=new DOMDocument("1.0", "UTF-8");
-                $archivoXML->formatOutput=true;
+                //Inicializar array para guardar departamentos
+                $aDepartamentos=[];
                 
-                
-                $nodo=$archivoXML->createElement('Departamentos');
-                $root=$archivoXML->appendChild($nodo);
-                
-                $oDepartamento=$oResultado->fetchObject();
-                while($oDepartamento){
-                    $nodo=$archivoXML->createElement('Departamento');
-                    $root=$archivoXML->appendChild($nodo);
+                $departamento=$oResultado->fetchObject();
+                while($departamento){
+                    //Datos de cada departamento
+                    $aDepartamento=[
+                        "CodDepartamento"=>$departamento->CodDepartamento,
+                        "DescDepartamento"=>$departamento->DescDepartamento,
+                        "FechaBaja"=>$departamento->FechaBaja,
+                        "VolumenNegocio"=>$departamento->VolumenNegocio,
+                    ];
                     
-                    $oDepartamento=$consulta->fetchObject();
+                    //Guarda los departamentos en un array
+                    array_push($aDepartamentos, $aDepartamento);
+                    $departamento=$oResultado->fetchObject();
                 }
                 
-                $archivoXML->save("../tmp/departamento.xml");
+                //Transforma el array a json
+                $archivoJSON=json_encode($aDepartamentos, JSON_PRETTY_PRINT);
                 
+                //Escribe los datos en el archivo departamentos.json
+                file_put_contents("../tmp/departamento.json", $archivoJSON);
                 
+                echo 'Archivo creado';
                 
             }catch(PDOException $excepcion){
                 $errorExcepcion=$excepcion->getCode();
