@@ -12,4 +12,4 @@ create table DB205DWESProyectoTema4.Departamento(
 
 --Creacion de usuario
 create user 'user205DWESProyectoTema4'@'%' identified by 'P@ssw0rd';
-grant all privileges on DB205DWESProyectoTema4.* to 'user205DWESProyectoTema4'@'%' with grant option;
+grant all privileges on DB205DWESProyectoTema4.* to 'user205DWESProyectoTema4'@'%';
